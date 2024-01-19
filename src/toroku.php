@@ -15,15 +15,15 @@ $initialCategoryId = 1;
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/style.css">
-    <title>商品登録</title>
+    <link rel="stylesheet" href="css/toroku.css">
+    <title>店舗登録</title>
 </head>
 <body>
     <div class="container">
-        <h1>商品登録画面</h1>
+        <h1>店舗登録画面</h1>
         <button onclick="location.href='itiran.php'" class="btn">トップへ戻る</button>
 
-        <br><hr><br>
+        <br><hr>
 
         <form method="post" action="torokukanryo.php">
             <label for="tenpo_id">店舗ID:</label>
