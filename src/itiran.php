@@ -24,7 +24,7 @@ if ($category == 0) {
 </head>
 <body>
     <div class="container">
-        <h1>店舗一覧</h1>
+        <h1 font-size: 20px;>店舗一覧</h1>
         <form action="itiran.php" method="post">
             <select name="category" id="category">
                 <option value="0">全てのカテゴリ</option>
@@ -38,9 +38,11 @@ if ($category == 0) {
             </select>
             <input type="submit" value="検索">
         </form>
+        <button onclick="location.href='toroku.php'" class="btn">商品を登録する</button>
+        <button onclick="location.href='category.php'" class="btn">カテゴリを登録する</button>
         <hr>
         <table>
-            <tr><th>店舗ID</th><th>店舗名</th><th>カテゴリ</th><th>電話番号</th></tr>
+            <tr><th>店舗ID</th><th>店舗名</th><th>カテゴリ</th><th>電話番号</th><th>更新</th><th>削除</th></tr>
             <?php
             foreach ($sql as $row) {
                 echo '<tr>';
@@ -66,8 +68,7 @@ if ($category == 0) {
             ?>
         </table>
         <br>
-        <button onclick="location.href='toroku.php'" class="btn">商品を登録する</button>
-        <button onclick="location.href='category.php'" class="btn">カテゴリを登録する</button>
+       
     </div>
 </body>
 </html>
