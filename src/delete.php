@@ -18,7 +18,7 @@ if($sql->execute([$_POST['tenpo_id']])) {
     echo '削除に失敗しました。';
 }
 ?>
-    <br><hr><br>
+    <br><hr>
 	<table>
     <tr><th>店舗ID</th><th>店舗名</th><th>カテゴリ</th><th>電話番号</th></tr>
     </tr>
@@ -34,6 +34,7 @@ if($sql->execute([$_POST['tenpo_id']])) {
     }
 ?> 
 </table>
+<br>
         <button onclick="location.href='itiran.php'" class="btn">トップへ戻る</button>
 
     </body>
