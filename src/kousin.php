@@ -44,6 +44,7 @@ $sql->execute([$_POST['tenpo_id']]);
 	}
 ?>
 </table>
+<br>
 <button onclick="location.href='itiran.php'" class="btn">トップへ戻る</button>
 </div>
     </body>
