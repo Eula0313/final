@@ -23,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $count = $checkId->fetchColumn();
 
     if ($count > 0) {
-        echo 'エラー：店舗IDが既存のデータと重複しています。別のIDを使用してください。';
+        echo '<br><br><font color="red">エラー：店舗IDが既存のデータと重複しています。別のIDを使用してください。</font>';
     } else {
         $sql = $pdo->prepare('INSERT INTO Tenpo (tenpo_id, tenpo_name, tenpo_cate, category_id, tenpo_tel) VALUES (?, ?, ?, ?, ?)');
 
@@ -35,9 +35,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             !empty($_POST['tenpo_tel']) &&
             $sql->execute([$_POST['tenpo_id'], $_POST['tenpo_name'], $_POST['tenpo_cate'], $_POST['category_id'], $_POST['tenpo_tel']])
         ) {
-            echo '<font color="red">追加に成功しました。</font>';
+            echo '<br><br><font color="red" font-size: 20px;>追加に成功しました。</font>';
         } else {
-            echo '<font color="red">追加に失敗しました。</font>';
+            echo '<br><br><font color="red" font-size: 20px;>追加に失敗しました。</font>';
         }
     }
 }
